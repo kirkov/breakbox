@@ -1,10 +1,11 @@
 {
   "name": "breakbox",
+  "version": "0.0.0-development",
   "description": "Responsive React container components.",
   "main": "dist/index.js",
   "source": "src/index.js",
   "scripts": {
-    "dist": "babel src --out-dir dist --ignore *.test.js",
+    "dist": "babel src --out-dir dist --ignore **.test.js",
     "lint": "standard",
     "test": "jest",
     "test:watch": "jest --watch",
