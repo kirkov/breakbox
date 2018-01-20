@@ -13,6 +13,12 @@ beforeEach(() => {
   resetStyles()
 })
 
+it('can specify element tag', () => {
+  matchSnapshot('container can render an article tag',
+    <Container tag='article' background='red' />
+  )
+})
+
 it('skips breakpoints', () => {
   matchSnapshot('skips middle value',
     <Container flexDirection={['row', null, 'column']} />

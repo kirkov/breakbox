@@ -56,6 +56,20 @@ exports[`can provide custom spaces: uses custom spaces 1`] = `
 </div>
 `;
 
+exports[`can specify element tag: container can render an article tag 1`] = `
+<article
+  className=" x0"
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": ".x0{background:red}",
+      }
+    }
+  />
+</article>
+`;
+
 exports[`handle single values: null value 1`] = `
 <div
   className=" "
