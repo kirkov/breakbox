@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`can provide custom breakpoints: uses custom breakpoints 1`] = `
+<div
+  className=" x0 x1 x2"
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": ".x0{width:50px}@media (min-width: 100px){.x1{width:150px}}@media (min-width: 200px){.x2{width:250px}}",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`can provide custom spaces: handle unknowns space 1`] = `
+<div
+  className=" x0 x1 x2"
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": ".x0{padding-right:10px}@media (min-width: 600px){.x1{padding-right:20px}}@media (min-width: 900px){.x2{padding-right:3px}}",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`can provide custom spaces: looks up the custom space values 1`] = `
+<div
+  className=" x0 x1 x2"
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": ".x0{padding-right:10px}@media (min-width: 600px){.x1{padding-right:20px}}@media (min-width: 900px){.x2{padding-right:30px}}",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`can provide custom spaces: uses custom spaces 1`] = `
+<div
+  className=" x0 x1 x2"
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": ".x0{margin-right:50}@media (min-width: 600px){.x1{margin-right:150}}@media (min-width: 900px){.x2{margin-right:250}}",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`handle single values: null value 1`] = `
+<div
+  className=" "
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`handle single values: single value 1`] = `
+<div
+  className=" x0"
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": ".x0{flex-direction:row}",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`skips breakpoints: skips empty 1`] = `
+<div
+  className=" "
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`skips breakpoints: skips empty string 1`] = `
+<div
+  className=" "
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`skips breakpoints: skips middle value 1`] = `
+<div
+  className=" x0 x1"
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": ".x0{flex-direction:row}@media (min-width: 900px){.x1{flex-direction:column}}",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`skips breakpoints: skips multiple values 1`] = `
+<div
+  className=" x0 x1"
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": ".x0{flex-direction:row}@media (min-width: 900px){.x1{flex-direction:column}}",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`skips breakpoints: skips null 1`] = `
+<div
+  className=" "
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`skips breakpoints: skips undefined 1`] = `
+<div
+  className=" "
+>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;

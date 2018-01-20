@@ -1,0 +1,56 @@
+{
+  "name": "breakbox",
+  "description": "Responsive React container components.",
+  "main": "dist/index.js",
+  "source": "src/index.js",
+  "scripts": {
+    "dist": "babel src --out-dir dist --ignore *.test.js",
+    "lint": "standard",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "semantic-release": "semantic-release"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.38",
+    "@babel/core": "^7.0.0-beta.38",
+    "@babel/preset-env": "^7.0.0-beta.38",
+    "@babel/preset-react": "^7.0.0-beta.38",
+    "@babel/preset-stage-3": "^7.0.0-beta.38",
+    "babel-core": "^7.0.0-0",
+    "babel-jest": "^22.1.0",
+    "jest": "^22.1.4",
+    "prop-types": "^15.6.0",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "react-test-renderer": "^16.1.1",
+    "semantic-release": "^12.2.2",
+    "standard": "^10.0.3"
+  },
+  "dependencies": {
+    "cxs": "^6.1.0"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.5.7",
+    "react": "^15.3.0 || ^16.0.0",
+    "react-dom": "^15.3.0 || ^16.0.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react",
+      "@babel/preset-stage-3"
+    ],
+    "plugins": []
+  },
+  "jest": {
+    "roots": [
+      "src"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kirkov/breakbox.git"
+  }
+}
