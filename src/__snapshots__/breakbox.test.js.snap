@@ -2,7 +2,7 @@
 
 exports[`can provide custom breakpoints: uses custom breakpoints 1`] = `
 <div
-  className=" x0 x1 x2"
+  className="x0 x1 x2"
 >
   <style
     dangerouslySetInnerHTML={
@@ -16,7 +16,7 @@ exports[`can provide custom breakpoints: uses custom breakpoints 1`] = `
 
 exports[`can provide custom spaces: handle unknowns space 1`] = `
 <div
-  className=" x0 x1 x2"
+  className="x0 x1 x2"
 >
   <style
     dangerouslySetInnerHTML={
@@ -30,7 +30,7 @@ exports[`can provide custom spaces: handle unknowns space 1`] = `
 
 exports[`can provide custom spaces: looks up the custom space values 1`] = `
 <div
-  className=" x0 x1 x2"
+  className="x0 x1 x2"
 >
   <style
     dangerouslySetInnerHTML={
@@ -44,7 +44,7 @@ exports[`can provide custom spaces: looks up the custom space values 1`] = `
 
 exports[`can provide custom spaces: uses custom spaces 1`] = `
 <div
-  className=" x0 x1 x2"
+  className="x0 x1 x2"
 >
   <style
     dangerouslySetInnerHTML={
@@ -58,7 +58,7 @@ exports[`can provide custom spaces: uses custom spaces 1`] = `
 
 exports[`can specify element tag: container can render an article tag 1`] = `
 <article
-  className=" x0"
+  className="x0"
 >
   <style
     dangerouslySetInnerHTML={
@@ -72,7 +72,7 @@ exports[`can specify element tag: container can render an article tag 1`] = `
 
 exports[`handle single values: null value 1`] = `
 <div
-  className=" "
+  className=""
 >
   <style
     dangerouslySetInnerHTML={
@@ -86,7 +86,7 @@ exports[`handle single values: null value 1`] = `
 
 exports[`handle single values: single value 1`] = `
 <div
-  className=" x0"
+  className="x0"
 >
   <style
     dangerouslySetInnerHTML={
@@ -100,7 +100,7 @@ exports[`handle single values: single value 1`] = `
 
 exports[`skips breakpoints: skips empty 1`] = `
 <div
-  className=" "
+  className=""
 >
   <style
     dangerouslySetInnerHTML={
@@ -114,7 +114,7 @@ exports[`skips breakpoints: skips empty 1`] = `
 
 exports[`skips breakpoints: skips empty string 1`] = `
 <div
-  className=" "
+  className=""
 >
   <style
     dangerouslySetInnerHTML={
@@ -128,7 +128,7 @@ exports[`skips breakpoints: skips empty string 1`] = `
 
 exports[`skips breakpoints: skips middle value 1`] = `
 <div
-  className=" x0 x1"
+  className="x0 x1"
 >
   <style
     dangerouslySetInnerHTML={
@@ -142,7 +142,7 @@ exports[`skips breakpoints: skips middle value 1`] = `
 
 exports[`skips breakpoints: skips multiple values 1`] = `
 <div
-  className=" x0 x1"
+  className="x0 x1"
 >
   <style
     dangerouslySetInnerHTML={
@@ -156,7 +156,7 @@ exports[`skips breakpoints: skips multiple values 1`] = `
 
 exports[`skips breakpoints: skips null 1`] = `
 <div
-  className=" "
+  className=""
 >
   <style
     dangerouslySetInnerHTML={
@@ -170,7 +170,7 @@ exports[`skips breakpoints: skips null 1`] = `
 
 exports[`skips breakpoints: skips undefined 1`] = `
 <div
-  className=" "
+  className=""
 >
   <style
     dangerouslySetInnerHTML={

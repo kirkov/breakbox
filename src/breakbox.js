@@ -73,7 +73,7 @@ export const breakbox = (containerStyles = {}) => {
     return React.createElement(
       tag,
       {
-        className: [className, stylesClassName].join(' ')
+        className: [className, stylesClassName].join(' ').trim()
       },
       [ children, debug ]
     )
