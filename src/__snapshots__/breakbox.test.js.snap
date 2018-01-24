@@ -2,12 +2,12 @@
 
 exports[`can provide custom breakpoints: uses custom breakpoints 1`] = `
 <div
-  className="x0 x1 x2"
+  className="_cxs0 _cxs1 _cxs2"
 >
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": ".x0{width:50px}@media (min-width: 100px){.x1{width:150px}}@media (min-width: 200px){.x2{width:250px}}",
+        "__html": "._cxs0{width:50px}@media (min-width: 100px){._cxs1{width:150px}}@media (min-width: 200px){._cxs2{width:250px}}",
       }
     }
   />
@@ -16,12 +16,12 @@ exports[`can provide custom breakpoints: uses custom breakpoints 1`] = `
 
 exports[`can provide custom spaces: handle unknowns space 1`] = `
 <div
-  className="x0 x1 x2"
+  className="_cxs0 _cxs1 _cxs2"
 >
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": ".x0{padding-right:10px}@media (min-width: 600px){.x1{padding-right:20px}}@media (min-width: 900px){.x2{padding-right:3px}}",
+        "__html": "._cxs0{padding-right:10px}@media (min-width: 600px){._cxs1{padding-right:20px}}@media (min-width: 900px){._cxs2{padding-right:3px}}",
       }
     }
   />
@@ -30,12 +30,12 @@ exports[`can provide custom spaces: handle unknowns space 1`] = `
 
 exports[`can provide custom spaces: looks up the custom space values 1`] = `
 <div
-  className="x0 x1 x2"
+  className="_cxs0 _cxs1 _cxs2"
 >
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": ".x0{padding-right:10px}@media (min-width: 600px){.x1{padding-right:20px}}@media (min-width: 900px){.x2{padding-right:30px}}",
+        "__html": "._cxs0{padding-right:10px}@media (min-width: 600px){._cxs1{padding-right:20px}}@media (min-width: 900px){._cxs2{padding-right:30px}}",
       }
     }
   />
@@ -44,12 +44,12 @@ exports[`can provide custom spaces: looks up the custom space values 1`] = `
 
 exports[`can provide custom spaces: uses custom spaces 1`] = `
 <div
-  className="x0 x1 x2"
+  className="_cxs0 _cxs1 _cxs2"
 >
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": ".x0{margin-right:50}@media (min-width: 600px){.x1{margin-right:150}}@media (min-width: 900px){.x2{margin-right:250}}",
+        "__html": "._cxs0{margin-right:50}@media (min-width: 600px){._cxs1{margin-right:150}}@media (min-width: 900px){._cxs2{margin-right:250}}",
       }
     }
   />
@@ -58,12 +58,12 @@ exports[`can provide custom spaces: uses custom spaces 1`] = `
 
 exports[`can specify element tag: container can render an article tag 1`] = `
 <article
-  className="x0"
+  className="_cxs0"
 >
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": ".x0{background:red}",
+        "__html": "._cxs0{background:red}",
       }
     }
   />
@@ -72,12 +72,12 @@ exports[`can specify element tag: container can render an article tag 1`] = `
 
 exports[`handle single values: null value 1`] = `
 <div
-  className=""
+  className="_cxs0"
 >
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "",
+        "__html": "._cxs0{}",
       }
     }
   />
@@ -86,12 +86,12 @@ exports[`handle single values: null value 1`] = `
 
 exports[`handle single values: single value 1`] = `
 <div
-  className="x0"
+  className="_cxs0"
 >
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": ".x0{flex-direction:row}",
+        "__html": "._cxs0{flex-direction:row}",
       }
     }
   />
@@ -100,12 +100,12 @@ exports[`handle single values: single value 1`] = `
 
 exports[`skips breakpoints: skips empty 1`] = `
 <div
-  className=""
+  className="_cxs0"
 >
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "",
+        "__html": "._cxs0{}",
       }
     }
   />
@@ -114,12 +114,12 @@ exports[`skips breakpoints: skips empty 1`] = `
 
 exports[`skips breakpoints: skips empty string 1`] = `
 <div
-  className=""
+  className="_cxs0"
 >
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "",
+        "__html": "._cxs0{}",
       }
     }
   />
@@ -128,12 +128,12 @@ exports[`skips breakpoints: skips empty string 1`] = `
 
 exports[`skips breakpoints: skips middle value 1`] = `
 <div
-  className="x0 x1"
+  className="_cxs0 _cxs1"
 >
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": ".x0{flex-direction:row}@media (min-width: 900px){.x1{flex-direction:column}}",
+        "__html": "._cxs0{flex-direction:row}@media (min-width: 900px){._cxs1{flex-direction:column}}",
       }
     }
   />
@@ -142,12 +142,12 @@ exports[`skips breakpoints: skips middle value 1`] = `
 
 exports[`skips breakpoints: skips multiple values 1`] = `
 <div
-  className="x0 x1"
+  className="_cxs0 _cxs1"
 >
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": ".x0{flex-direction:row}@media (min-width: 900px){.x1{flex-direction:column}}",
+        "__html": "._cxs0{flex-direction:row}@media (min-width: 900px){._cxs1{flex-direction:column}}",
       }
     }
   />
@@ -156,12 +156,12 @@ exports[`skips breakpoints: skips multiple values 1`] = `
 
 exports[`skips breakpoints: skips null 1`] = `
 <div
-  className=""
+  className="_cxs0"
 >
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "",
+        "__html": "._cxs0{}",
       }
     }
   />
@@ -170,12 +170,12 @@ exports[`skips breakpoints: skips null 1`] = `
 
 exports[`skips breakpoints: skips undefined 1`] = `
 <div
-  className=""
+  className="_cxs0"
 >
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "",
+        "__html": "._cxs0{}",
       }
     }
   />

@@ -1,5 +1,5 @@
 import React from 'react'
-import cxs from 'cxs'
+import cxs from 'cxs/monolithic'
 import defaultConfig from './config'
 import contextTypes from './context-types'
 
