@@ -3,6 +3,8 @@ import cxs from 'cxs/monolithic'
 import defaultConfig from './config'
 import contextTypes from './context-types'
 
+cxs.prefix('_bbx_')
+
 const resolveValue = (spaces, value) => {
   if (typeof value !== 'number') return value
 
