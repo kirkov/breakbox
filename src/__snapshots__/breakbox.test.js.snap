@@ -72,12 +72,12 @@ exports[`can specify element tag: container can render an article tag 1`] = `
 
 exports[`handle single values: null value 1`] = `
 <div
-  className="_bbx_0"
+  className=""
 >
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "._bbx_0{}",
+        "__html": "",
       }
     }
   />
@@ -100,12 +100,12 @@ exports[`handle single values: single value 1`] = `
 
 exports[`skips breakpoints: skips empty 1`] = `
 <div
-  className="_bbx_0"
+  className=""
 >
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "._bbx_0{}",
+        "__html": "",
       }
     }
   />
@@ -114,12 +114,12 @@ exports[`skips breakpoints: skips empty 1`] = `
 
 exports[`skips breakpoints: skips empty string 1`] = `
 <div
-  className="_bbx_0"
+  className=""
 >
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "._bbx_0{}",
+        "__html": "",
       }
     }
   />
@@ -156,12 +156,12 @@ exports[`skips breakpoints: skips multiple values 1`] = `
 
 exports[`skips breakpoints: skips null 1`] = `
 <div
-  className="_bbx_0"
+  className=""
 >
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "._bbx_0{}",
+        "__html": "",
       }
     }
   />
@@ -170,12 +170,12 @@ exports[`skips breakpoints: skips null 1`] = `
 
 exports[`skips breakpoints: skips undefined 1`] = `
 <div
-  className="_bbx_0"
+  className=""
 >
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "._bbx_0{}",
+        "__html": "",
       }
     }
   />
