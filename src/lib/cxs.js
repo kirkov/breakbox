@@ -22,7 +22,7 @@ const parse = (obj, child = '', media) =>
       return parse(val, c2, m2 || media)
     }
     const _key = key + val + child + media
-    if (cache[_key]) return cache[_key]
+    // if (cache[_key]) return cache[_key]
     const className = prefix + (rules.length).toString(36)
     insert(mx(rx(className + noAnd(child), key, val), media), !!media)
     cache[_key] = className
