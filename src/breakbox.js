@@ -60,8 +60,8 @@ const getStyles = (props, config) => {
   return styles
 }
 
-export const breakbox = (containerStyles = {}) => {
-  const BreakboxComponent = ({className, children, tag = 'div', ...otherProps}, context) => {
+export const breakbox = ({ containerStyles = {}, displayName = 'Breakbox' }) => {
+  const BreakboxComponent = ({ className, style, children, tag = 'div', ...otherProps }, context) => {
     const config = Object.assign({}, defaultConfig, context.breakbox)
     const styles = getStyles(Object.assign(otherProps, containerStyles), config)
     const stylesClassName = cxs(styles)
@@ -75,6 +75,7 @@ export const breakbox = (containerStyles = {}) => {
     return React.createElement(
       tag,
       {
+        style: style || {},
         className: [className, stylesClassName].join(' ').trim()
       },
       [ children, debug ]
@@ -82,6 +83,7 @@ export const breakbox = (containerStyles = {}) => {
   }
 
   BreakboxComponent.contextTypes = contextTypes
+  BreakboxComponent.displayName = displayName
 
   return BreakboxComponent
 }

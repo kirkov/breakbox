@@ -1,7 +1,10 @@
 import { breakbox } from '../breakbox'
 
 const GridContainer = breakbox({
-  display: 'grid'
+  displayName: 'Breakbox(GridContainer)',
+  containerStyles: {
+    display: 'grid'
+  }
 })
 
 export default GridContainer

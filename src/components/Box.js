@@ -1,5 +1,5 @@
-import {breakbox} from '../breakbox'
+import { breakbox } from '../breakbox'
 
-const Box = breakbox()
+const Box = breakbox({ displayName: 'Breakbox(Box)' })
 
 export default Box
