@@ -72,12 +72,17 @@ export const breakbox = ({ containerStyles = {}, displayName = 'Breakbox' }) => 
       debug = <style key='css' dangerouslySetInnerHTML={{ __html: cxs.css() }} />
     }
 
+    const props = {
+      className: [className, stylesClassName].join(' ').trim()
+    }
+
+    if (style) {
+      props.style = style
+    }
+
     return React.createElement(
       tag,
-      {
-        style: style || {},
-        className: [className, stylesClassName].join(' ').trim()
-      },
+      props,
       [ children, debug ]
     )
   }
