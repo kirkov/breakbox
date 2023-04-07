@@ -5,12 +5,12 @@ import {Provider, Container, Box} from '.'
 import {resetStyles} from './breakbox'
 
 const matchSnapshot = (name, rendered) => {
-  resetStyles()
+  // resetStyles()
   expect(renderer.create(rendered).toJSON()).toMatchSnapshot(name)
 }
 
 beforeEach(() => {
-  resetStyles()
+  // resetStyles()
 })
 
 it('can specify element tag', () => {
@@ -57,7 +57,7 @@ it('handle single values', () => {
 
 it('can provide custom breakpoints', () => {
   matchSnapshot('uses custom breakpoints',
-    <Provider breakpoints={['100px', '200px', '300px']}>
+    <Provider config={{ breakpoints: ['100px', '200px', '300px'] }}>
       <Container width={[50, 150, 250]} />
     </Provider>
   )
@@ -65,20 +65,41 @@ it('can provide custom breakpoints', () => {
 
 it('can provide custom spaces', () => {
   matchSnapshot('uses custom spaces',
-    <Provider spaces={['100px', '200px', '300px']}>
+    <Provider config={{ spaces: ['100px', '200px', '300px'] }}>
       <Container marginRight={['50', '150', '250']} />
     </Provider>
   )
 
   matchSnapshot('looks up the custom space values',
-    <Provider spaces={['10px', '20px', '30px']}>
+    <Provider config={{ spaces: ['10px', '20px', '30px'] }}>
       <Box paddingRight={[1, 2, 3]} />
     </Provider>
   )
 
   matchSnapshot('handle unknowns space',
-    <Provider spaces={['10px', '20px']}>
+    <Provider config={{ spaces: ['10px', '20px'] }}>
       <Box paddingRight={[1, 2, 3]} />
     </Provider>
   )
 })
+
+// function Test () {
+//   const myRef = React.useRef()
+//   return (
+//     <Provider spaces={['10px', '20px']}>
+//       <Box ref={myRef} paddingRight={[1, 2, 3]} />
+//     </Provider>
+//   )
+// }
+
+// it.only('forwards ref', () => {
+
+
+
+//   // console.log({ myRef })
+
+//   const testRenderer = renderer.create(<Test />)
+
+//   // console.log(myRef)
+
+// })

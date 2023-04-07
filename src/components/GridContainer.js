@@ -1,10 +1,14 @@
-import { breakbox } from '../breakbox'
+import React from 'react'
+import { Breakbox } from '../breakbox'
 
-const GridContainer = breakbox({
-  displayName: 'Breakbox(GridContainer)',
-  containerStyles: {
-    display: 'grid'
-  }
-})
+const containerStyles = {
+  display: 'grid'
+}
 
-export default GridContainer
+function GridContainer (props, ref) {
+  return (
+    <Breakbox {...props} ref={ref} containerStyles={containerStyles} />
+  )
+}
+
+export default React.forwardRef(GridContainer)

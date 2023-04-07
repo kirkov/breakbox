@@ -1,5 +1,12 @@
-import { breakbox } from '../breakbox'
+import React from 'react'
+import { Breakbox } from '../breakbox'
 
-const Box = breakbox({ displayName: 'Breakbox(Box)' })
+const containerStyles = {}
 
-export default Box
+function Box (props, ref) {
+  return (
+    <Breakbox {...props} ref={ref} containerStyles={containerStyles} />
+  )
+}
+
+export default React.forwardRef(Box)

@@ -1,10 +1,14 @@
-import { breakbox } from '../breakbox'
+import React from 'react'
+import { Breakbox } from '../breakbox'
 
-const FlexContainer = breakbox({
-  displayName: 'Breakbox(FlexContainer)',
-  containerStyles: {
-    display: 'flex'
-  }
-})
+const containerStyles = {
+  display: 'flex'
+}
 
-export default FlexContainer
+function FlexContainer (props, ref) {
+  return (
+    <Breakbox {...props} ref={ref} containerStyles={containerStyles} />
+  )
+}
+
+export default React.forwardRef(FlexContainer)

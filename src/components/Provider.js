@@ -1,16 +1,11 @@
-import React, {Component} from 'react'
-import contextTypes from '../context-types'
+import React from 'react'
 
-export default class Provider extends Component {
-  getChildContext () {
-    return {
-      breakbox: this.props
-    }
-  }
+export const BreakboxContext = React.createContext()
 
-  render () {
-    return React.Children.only(this.props.children)
-  }
+export default function Provider ({ children, config }) {
+  return (
+    <BreakboxContext.Provider value={config}>
+      {children}
+    </BreakboxContext.Provider>
+  )
 }
-
-Provider.childContextTypes = contextTypes

@@ -1,9 +1,7 @@
-import React from 'react'
-import cxs from './lib/cxs'
+import React, { useContext } from 'react'
 import defaultConfig from './config'
-import contextTypes from './context-types'
-
-cxs.prefix('_bbx_')
+import { getCss } from './lib/styles'
+import { BreakboxContext } from './components/Provider'
 
 const resolveValue = (spaces, value) => {
   if (typeof value !== 'number') return value
@@ -60,37 +58,38 @@ const getStyles = (props, config) => {
   return styles
 }
 
-export const breakbox = ({ containerStyles = {}, displayName = 'Breakbox' }) => {
-  const BreakboxComponent = ({ className, style, children, tag = 'div', ...otherProps }, context) => {
-    const config = Object.assign({}, defaultConfig, context.breakbox)
-    const styles = getStyles(Object.assign(otherProps, containerStyles), config)
-    const stylesClassName = cxs(styles)
+export const Breakbox = React.forwardRef((props, ref) => {
+  const { className, style, children, containerStyles, tag = 'div', ...otherProps } = props
+  const context = useContext(BreakboxContext)
 
-    // used for testing
-    let debug = null
-    if (process.env.NODE_ENV === 'test') {
-      debug = <style key='css' dangerouslySetInnerHTML={{ __html: cxs.css() }} />
-    }
+  const config = Object.assign({}, defaultConfig, context || {})
+  const styles = getStyles(Object.assign(otherProps, containerStyles), config)
+  const [stylesClassName, css] = getCss(styles)
 
-    const props = {
-      className: [className, stylesClassName].join(' ').trim()
-    }
+  const StyleElement = <style>{css}</style>
 
-    if (style) {
-      props.style = style
-    }
+  // cxs.reset()
 
-    return React.createElement(
-      tag,
-      props,
-      [ children, debug ]
-    )
+  // used for testing
+  let debug = null
+  if (process.env.NODE_ENV === 'test') {
+    debug = <style key='css'>{css}</style>
   }
 
-  BreakboxComponent.contextTypes = contextTypes
-  BreakboxComponent.displayName = displayName
+  const componentProps = {
+    className: [className, stylesClassName].join(' ').trim(),
+    ref
+  }
 
-  return BreakboxComponent
-}
+  if (style) {
+    componentProps.style = style
+  }
 
-export const resetStyles = () => cxs.reset()
+  return React.createElement(
+    tag,
+    componentProps,
+    [ children, StyleElement, debug ]
+  )
+})
+
+// export const resetStyles = () => cxs.reset()

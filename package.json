@@ -23,19 +23,16 @@
     "babel-jest": "^22.1.0",
     "jest": "^22.1.4",
     "prop-types": "^15.6.0",
-    "react": "^16.1.1",
-    "react-dom": "^16.1.1",
-    "react-test-renderer": "^16.1.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-test-renderer": "^16.14.0",
     "semantic-release": "^12.2.2",
     "standard": "^10.0.3"
   },
-  "dependencies": {
-    "cxs": "^6.1.0"
-  },
   "peerDependencies": {
     "prop-types": "^15.5.7",
-    "react": "^15.3.0 || ^16.0.0",
-    "react-dom": "^15.3.0 || ^16.0.0"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "babel": {
     "presets": [

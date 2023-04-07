@@ -2,6 +2,15 @@
   CXS taken from this PR which fixes media queries ordering:
   https://github.com/cxs-css/cxs/pull/82
 */
+
+
+
+function hashCode(str) {
+  return Array.from(str)
+    .reduce((s, c) => Math.imul(31, s) + c.charCodeAt(0) | 0, 0)
+    .toString(36)
+}
+
 let cache = {}
 let mqs = 0
 let prefix = 'x'
@@ -23,9 +32,11 @@ const parse = (obj, child = '', media) =>
     }
     const _key = key + val + child + media
     // if (cache[_key]) return cache[_key]
-    const className = prefix + (rules.length).toString(36)
-    insert(mx(rx(className + noAnd(child), key, val), media), !!media)
-    cache[_key] = className
+    // const className = prefix + (rules.length).toString(36)
+    const className = prefix + hashCode(_key)
+    const css = mx(rx(className + noAnd(child), key, val), media)
+    insert(css, !!media)
+    // cache[_key] = className
     return className
   })
     .join(' ')
@@ -45,13 +56,13 @@ module.exports.prefix = (val) => {
   prefix = val
 }
 
-if (typeof document !== 'undefined') {
-  const sheet = document.head.appendChild(
-    document.createElement('style')
-  ).sheet
-  insert = (rule, media) => {
-    rules.push(rule)
-    if (media) mqs += 1
-    sheet.insertRule(rule, sheet.cssRules.length - (media ? 0 : mqs))
-  }
-}
+// if (typeof document !== 'undefined') {
+//   const sheet = document.head.appendChild(
+//     document.createElement('style')
+//   ).sheet
+//   insert = (rule, media) => {
+//     rules.push(rule)
+//     if (media) mqs += 1
+//     sheet.insertRule(rule, sheet.cssRules.length - (media ? 0 : mqs))
+//   }
+// }
